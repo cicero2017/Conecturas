@@ -23,8 +23,10 @@ import com.tw.spring.model.Livro;
 import com.tw.spring.repository.LivrosRepository;
 import com.tw.spring.service.LivroService;
 
+import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 
+@Api(value = "Livro")
 @RestController
 @RequestMapping(value = "salvar")
 @AllArgsConstructor
@@ -65,9 +67,7 @@ public class LivroController {
 	          	    	
 	      }
 	
-	  
-	    
-	    	    
+	          	    
 	    
 	    @DeleteMapping(path= {"id"})
 	    public void deletar(@PathVariable Long id){
